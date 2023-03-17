@@ -9,19 +9,17 @@ const Product = () => {
   return (    
     <div style={{display:'flex', flexDirection:'row'}}>        
         {
-            product.map( prod => {
-                return(
-                    <div id={prod.id} className='card'>
-                        <h2>{prod.title}</h2>
-                        <h3>{prod.description}</h3>
-                        <h3>{prod.price}</h3>
-                        <h3>{prod.stock}</h3>
-                        <h3>{prod.brand}</h3>
-                        <h3>{prod.category}</h3>
-                        <img src={prod.image} alt="" width={200}/>
-                    </div>
-                )
-            })        
+            product.map( prod => (
+                <div id={prod.id} className='card'>
+                    <h2>{prod.title}</h2>
+                    <h3>{prod.description}</h3>
+                    <h3>{prod.price}</h3>
+                    <h3>{prod.stock}</h3>
+                    <h3>{prod.brand}</h3>
+                    <h3>{prod.category}</h3>
+                    <img src={prod.image} alt="" width={200}/>
+                </div>
+            ))        
         }        
     </div>
   )
